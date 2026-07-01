@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&display=swap');
+
+/* ————————————————————————————————
+   Transparent slide layers
+   (lava lives in global-bottom.vue)
+   ———————————————————————————————— */
+
+.slidev-page {
+  background: transparent !important;
+}
+
+.slidev-layout {
+  background: transparent !important;
+  color: #c8b8a8 !important;
+  font-family: 'Montserrat', sans-serif !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+
+/* Dark tint — lets lava glow through */
+.slidev-layout::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 6, 4, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1;
+}
+
+/* Content above tint */
+.slidev-layout > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ————————————————————————————————
+   Typography
+   ———————————————————————————————— */
+
+h1, h2, h3 {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+h1 {
+  font-weight: 600 !important;
+  font-size: 1.8em !important;
+  color: #f0e8e0 !important;
+}
+
+h2 {
+  font-weight: 400 !important;
+  font-size: 1.35em !important;
+  color: #f0e8e0 !important;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-weight: 500 !important;
+  font-size: 0.95em !important;
+  color: #FFD000 !important;
+}
+
+p, li {
+  color: #c8b8a8;
+  line-height: 1.7;
+}
+
+li { margin-bottom: 0.3em; }
+strong { color: #f0e8e0 !important; }
+
+a {
+  color: #1a3fff !important;
+  text-decoration: none !important;
+  font-family: 'Roboto Mono', monospace;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #4d6fff !important;
+  text-decoration: underline !important;
+}
+
+/* ————————————————————————————————
+   Code blocks
+   ———————————————————————————————— */
+
+code {
+  font-family: 'Roboto Mono', monospace !important;
+  background: rgba(255, 208, 0, 0.08) !important;
+  color: #FFD000 !important;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.85em;
+  border: 1px solid rgba(255, 208, 0, 0.12);
+}
+
+pre code {
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  color: #d4c8bc !important;
+}
+
+.slidev-code {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  border-radius: 10px !important;
+}
+
+.slidev-code button {
+  display: none !important;
+}
+
+/* ————————————————————————————————
+   Tables
+   ———————————————————————————————— */
+
+table {
+  font-size: 0.82em;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  font-family: 'Roboto Mono', monospace !important;
+  font-weight: 500 !important;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #FFD000 !important;
+  border-bottom: 2px solid rgba(255, 208, 0, 0.25) !important;
+  text-align: left;
+  padding: 0.5em 0.6em;
+}
+
+td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+  padding: 0.4em 0.6em;
+  color: #c8b8a8;
+}
+
+/* ————————————————————————————————
+   Utility
+   ———————————————————————————————— */
+
+.flower-title {
+  color: #FFD000;
+}
+
+.logo-badge {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+
+.step-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 1.2em;
+}
+
+/* ————————————————————————————————
+   Animated flow lines
+   ———————————————————————————————— */
+
+
+
+/* ————————————————————————————————
+   Animated flow lines (CSS)
+   ———————————————————————————————— */
+
+@keyframes marchRight {
+  from { background-position: 0 0; }
+  to { background-position: 12px 0; }
+}
+
+@keyframes marchLeft {
+  from { background-position: 12px 0; }
+  to { background-position: 0 0; }
+}
+
+.marching-line {
+  border-radius: 2px;
+}
+
+.marching-right {
+  background: repeating-linear-gradient(90deg, #88ccff 0, #88ccff 6px, transparent 6px, transparent 12px);
+  background-size: 12px 100%;
+  animation: marchRight 0.6s linear infinite;
+}
+
+.marching-left {
+  background: repeating-linear-gradient(90deg, #ffaacc 0, #ffaacc 6px, transparent 6px, transparent 12px);
+  background-size: 12px 100%;
+  animation: marchLeft 0.6s linear infinite;
+}
+
+/* ————————————————————————————————
+   Demo execution line stagger
+   ———————————————————————————————— */
+
+@keyframes lineReveal {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Children hidden by default */
+.exec-lines > div {
+  opacity: 0;
+}
+
+/* When v-click reveals parent, stagger children with delays */
+.exec-lines:not(.slidev-vclick-hidden) > div {
+  animation: lineReveal 0.15s ease forwards;
+}
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(1) { animation-delay: 0.25s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(2) { animation-delay: 0.5s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(3) { animation-delay: 0.75s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(4) { animation-delay: 1.0s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(5) { animation-delay: 1.25s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(6) { animation-delay: 1.5s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(7) { animation-delay: 1.75s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(8) { animation-delay: 2.0s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(9) { animation-delay: 2.25s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(10) { animation-delay: 2.5s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(11) { animation-delay: 2.75s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(12) { animation-delay: 3.0s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(13) { animation-delay: 3.25s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(14) { animation-delay: 3.5s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(15) { animation-delay: 3.75s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(16) { animation-delay: 4.0s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(17) { animation-delay: 4.25s; }
+.exec-lines:not(.slidev-vclick-hidden) > div:nth-child(18) { animation-delay: 4.5s; }
+
+/* ————————————————————————————————
+   Miscellaneous
+   ———————————————————————————————— */
+
+.g-term {
+  cursor: pointer;
+  border-bottom: 1px dotted currentColor;
+  padding-bottom: 1px;
+}
+
+blockquote {
+  border-left: 3px solid rgba(255, 208, 0, 0.3) !important;
+  padding-left: 1em;
+  color: #c8b8a8 !important;
+}
+
+ul li::marker { color: #FF8801; }
+
+.glow-pulse {
+  animation: glowPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 8px rgba(102, 221, 170, 0.45), 0 0 18px rgba(102, 221, 170, 0.22); }
+  50% { text-shadow: 0 0 16px rgba(102, 221, 170, 0.85), 0 0 34px rgba(102, 221, 170, 0.5); }
+}
+
+/* ————————————————————————————————
+   Cover & closing — raw lava, no overlay
+   ———————————————————————————————— */
+
+/* No overlay on cover & closing */
+.slidev-page-1 .slidev-layout::after,
+.closing-slide.slidev-layout::after {
+  opacity: 0;
+}
+
+/* Overlay fades in on first content slide */
+
+/* Cover & closing text styles */
+.slidev-page-1 .slidev-layout,
+.slidev-page-1 .slidev-layout *,
+.closing-slide.slidev-layout,
+.closing-slide.slidev-layout * {
+  text-shadow: none;
+}
+
+.slidev-page-1 .flower-title,
+.closing-slide .flower-title {
+  color: #000000 !important;
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+.slidev-page-1 .slidev-layout a,
+.closing-slide.slidev-layout a {
+  color: #333333 !important;
+}
+

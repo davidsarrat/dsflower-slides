@@ -1,0 +1,71 @@
+## Analyst-Side Package
+
+<div style="position: relative; margin-top: 0.2em;">
+
+<svg viewBox="0 -15 720 355" style="width: 100%; max-height: 430px;">
+
+  <!-- ===== ALWAYS VISIBLE: Analyst machine ===== -->
+
+  <!-- Analyst machine box -->
+  <rect x="170" y="5" width="380" height="300" rx="14" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.10)" stroke-width="0.8"/>
+  <text x="360" y="24" text-anchor="middle" fill="#e0d8d0" font-family="Roboto Mono" font-size="4" font-weight="500">Analyst Machine</text>
+
+  <!-- ===== CLICK 1: dsFlowerClient ===== -->
+  <g v-click>
+    <rect x="195" y="36" width="330" height="44" rx="10" fill="rgba(255,208,0,0.06)" stroke="rgba(255,208,0,0.12)" stroke-width="0.8"/>
+    <text x="360" y="54" text-anchor="middle" fill="#FFD000" font-family="Roboto Mono" font-size="3.8" font-weight="500">dsFlowerClient R Package</text>
+    <text x="360" y="70" text-anchor="middle" fill="#b0b8c0" font-family="Roboto Mono" font-size="2.5">Run orchestration · Result management</text>
+  </g>
+
+  <!-- ===== CLICK 2: SuperLink ===== -->
+  <g v-click>
+    <rect x="195" y="90" width="330" height="40" rx="8" fill="rgba(136,204,255,0.08)" stroke="rgba(136,204,255,0.20)" stroke-width="0.8"/>
+    <text x="360" y="108" text-anchor="middle" fill="#88ccff" font-family="Roboto Mono" font-size="3.5" font-weight="500">Flower SuperLink</text>
+    <text x="360" y="123" text-anchor="middle" fill="#b0b8c0" font-family="Roboto Mono" font-size="2.2" class="g-term" data-g="DSI tunnel" style="cursor:pointer;">local · bytes ride the DataSHIELD channel</text>
+
+    <!-- Annotation: DSI tunnel -->
+    <text x="560" y="102" fill="#88ccff" font-family="Roboto Mono" font-size="3">No gRPC port</text>
+    <text x="560" y="114" fill="#b0b8c0" font-family="Roboto Mono" font-size="2.2">inherits the DSI</text>
+    <text x="560" y="124" fill="#b0b8c0" font-family="Roboto Mono" font-size="2.2">TLS connection</text>
+  </g>
+
+  <!-- ===== CLICK 3: Template catalog ===== -->
+  <g v-click>
+    <rect x="195" y="140" width="330" height="42" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+    <text x="360" y="157" text-anchor="middle" fill="#e0d8d0" font-family="Roboto Mono" font-size="2.8">Model — a spec or an app</text>
+    <text x="360" y="174" text-anchor="middle" fill="#b0b8c0" font-family="Roboto Mono" font-size="2.5">Tier-1 nn.Module spec · Tier-2 uploaded app</text>
+
+    <text x="560" y="155" fill="#88ccff" font-family="Roboto Mono" font-size="3">register_model()</text>
+    <text x="560" y="167" fill="#b0b8c0" font-family="Roboto Mono" font-size="2.2">or app.upload()</text>
+    <text x="560" y="177" fill="#b0b8c0" font-family="Roboto Mono" font-size="2.2">built-ins by name</text>
+  </g>
+
+  <!-- ===== CLICK 4: Recipe composition ===== -->
+  <g v-click>
+    <rect x="195" y="192" width="330" height="62" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
+    <text x="360" y="208" text-anchor="middle" fill="#e0d8d0" font-family="Roboto Mono" font-size="2.8">One call: ds.flower.fit()</text>
+    <text x="360" y="222" text-anchor="middle" fill="#FFD000" font-family="Roboto Mono" font-size="2.5">model · target · rounds</text>
+    <text x="360" y="236" text-anchor="middle" fill="#b0b8c0" font-family="Roboto Mono" font-size="2">What to train · Which outcome · How long</text>
+    <text x="360" y="248" text-anchor="middle" fill="#b0b8c0" font-family="Roboto Mono" font-size="1.8">Privacy is server-enforced, not chosen by the analyst</text>
+  </g>
+
+  <!-- ===== CLICK 5: Code integrity ===== -->
+  <g v-click>
+    <rect x="195" y="263" width="330" height="28" rx="5" fill="rgba(102,221,170,0.06)" stroke="rgba(102,221,170,0.15)" stroke-width="0.6"/>
+    <text x="360" y="275" text-anchor="middle" fill="#66ddaa" font-family="Roboto Mono" font-size="2.2">Uploaded-app integrity</text>
+    <text x="360" y="286" text-anchor="middle" fill="#b0b8c0" font-family="Roboto Mono" font-size="2">SHA-256 pinned &amp; identical on every node before it runs</text>
+  </g>
+
+  <!-- Hospital label (appears with SuperLink, click 2) -->
+  <g v-click="2">
+    <text x="90" y="140" text-anchor="middle" fill="#b0b8c0" font-family="Roboto Mono" font-size="2.5">N Hospital Servers</text>
+    <text x="90" y="152" text-anchor="middle" fill="#b0b8c0" font-family="Roboto Mono" font-size="1.8">(dsFlower installed)</text>
+  </g>
+
+</svg>
+
+<!-- Animated connection lines (HTML, positioned over SVG) -->
+<div v-click="2" class="marching-line marching-left" style="position:absolute; left:3.5%; top:33%; width:23%; height:3px;"></div>
+<div v-click="2" class="marching-line marching-right" style="position:absolute; left:3.5%; top:37%; width:23%; height:3px;"></div>
+
+</div>

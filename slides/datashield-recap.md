@@ -1,0 +1,94 @@
+## Recap: the classic DataSHIELD workflow
+
+<div style="margin-top: 0.2em;">
+<svg viewBox="0 0 810 340" style="width: 100%; max-height: 330px;">
+
+  <!-- Hospital nodes (top row) -->
+  <g transform="translate(120,65)">
+    <rect x="-80" y="-40" width="160" height="80" rx="14" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    <rect x="-10" y="-24" width="20" height="18" rx="2" fill="none" stroke="#e0d8d0" stroke-width="1.3"/>
+    <line x1="0" y1="-20" x2="0" y2="-12" stroke="#e0d8d0" stroke-width="1.3"/>
+    <line x1="-4" y1="-16" x2="4" y2="-16" stroke="#e0d8d0" stroke-width="1.3"/>
+    <text y="14" text-anchor="middle" fill="#e0d8d0" font-family="Roboto Mono" font-size="4.5" font-weight="500">Hospital A</text>
+    <text y="28" text-anchor="middle" fill="#ffb366" font-family="Roboto Mono" font-size="2.8">own data</text>
+  </g>
+
+  <g transform="translate(350,65)">
+    <rect x="-80" y="-40" width="160" height="80" rx="14" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    <rect x="-10" y="-24" width="20" height="18" rx="2" fill="none" stroke="#e0d8d0" stroke-width="1.3"/>
+    <line x1="0" y1="-20" x2="0" y2="-12" stroke="#e0d8d0" stroke-width="1.3"/>
+    <line x1="-4" y1="-16" x2="4" y2="-16" stroke="#e0d8d0" stroke-width="1.3"/>
+    <text y="14" text-anchor="middle" fill="#e0d8d0" font-family="Roboto Mono" font-size="4.5" font-weight="500">Hospital B</text>
+    <text y="28" text-anchor="middle" fill="#ffb366" font-family="Roboto Mono" font-size="2.8">own data</text>
+  </g>
+
+  <g transform="translate(580,65)">
+    <rect x="-80" y="-40" width="160" height="80" rx="14" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    <rect x="-10" y="-24" width="20" height="18" rx="2" fill="none" stroke="#e0d8d0" stroke-width="1.3"/>
+    <line x1="0" y1="-20" x2="0" y2="-12" stroke="#e0d8d0" stroke-width="1.3"/>
+    <line x1="-4" y1="-16" x2="4" y2="-16" stroke="#e0d8d0" stroke-width="1.3"/>
+    <text y="14" text-anchor="middle" fill="#e0d8d0" font-family="Roboto Mono" font-size="4.5" font-weight="500">Hospital C</text>
+    <text y="28" text-anchor="middle" fill="#ffb366" font-family="Roboto Mono" font-size="2.8">own data</text>
+  </g>
+
+  <!-- Server-side annotation (right of Hospital C) -->
+  <text x="735" y="52" fill="#88ccff" font-family="Roboto Mono" font-size="3.5" text-anchor="middle">Local Compute</text>
+  <text x="735" y="64" fill="#b0b8c0" font-family="Roboto Mono" font-size="2.5" text-anchor="middle">+</text>
+  <foreignObject x="635" y="57" width="200" height="36">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="height:100%;display:flex;align-items:center;justify-content:center;">
+      <span style="font-family:Roboto Mono,monospace;font-size:11px;line-height:1;padding:1.5px 4px;border-radius:2px;white-space:nowrap;background:transparent;color:#b0b8c0;">Disclosure Control</span>
+    </div>
+  </foreignObject>
+
+  <!-- Researcher node (bottom center) -->
+  <g transform="translate(350,280)">
+    <rect x="-100" y="-38" width="200" height="76" rx="14" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    <circle cx="-16" cy="-16" r="7" fill="none" stroke="#e0d8d0" stroke-width="1.3"/>
+    <path d="M-26,-4 C-26,-10 -6,-10 -6,-4" fill="none" stroke="#e0d8d0" stroke-width="1.3"/>
+    <rect x="8" y="-20" width="22" height="15" rx="2" fill="none" stroke="#e0d8d0" stroke-width="1.3"/>
+    <line x1="5" y1="-2" x2="33" y2="-2" stroke="#e0d8d0" stroke-width="1.3" stroke-linecap="round"/>
+    <text y="16" text-anchor="middle" fill="#e0d8d0" font-family="Roboto Mono" font-size="4.5" font-weight="500">Researcher</text>
+  </g>
+
+  <!-- Result pooling label (right of researcher) -->
+  <text x="470" y="276" fill="#88ccff" font-family="Roboto Mono" font-size="3.5">Result Pooling</text>
+  <text x="470" y="290" fill="#b0b8c0" font-family="Roboto Mono" font-size="3">Orchestrator Role</text>
+
+  <!-- Queries flowing UP (yellow) -->
+  <path d="M335,242 C260,185 125,145 105,105" fill="none" stroke="#FFD000" stroke-width="2.5" stroke-dasharray="8 6">
+    <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+  <path d="M335,242 L340,105" fill="none" stroke="#FFD000" stroke-width="2.5" stroke-dasharray="8 6">
+    <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+  <path d="M335,242 C400,185 535,145 565,105" fill="none" stroke="#FFD000" stroke-width="2.5" stroke-dasharray="8 6">
+    <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Results flowing DOWN (green) -->
+  <path d="M140,105 C170,155 305,195 365,242" fill="none" stroke="#66ddaa" stroke-width="2" stroke-dasharray="8 6">
+    <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+  <path d="M360,105 L365,242" fill="none" stroke="#66ddaa" stroke-width="2" stroke-dasharray="8 6">
+    <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+  <path d="M600,105 C570,155 435,195 365,242" fill="none" stroke="#66ddaa" stroke-width="2" stroke-dasharray="8 6">
+    <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Label paths -->
+  <path id="lblQLR" d="M82,118 C108,160 245,200 320,258" fill="none" stroke="none"/>
+  <path id="lblRLR" d="M122,88 C148,135 280,172 348,225" fill="none" stroke="none"/>
+  <path id="lblQRR" d="M352,218 C420,165 552,128 578,80" fill="none" stroke="none"/>
+  <path id="lblRRR" d="M385,252 C455,205 588,165 622,115" fill="none" stroke="none"/>
+
+  <!-- Labels -->
+  <text fill="#FFD000" font-family="Roboto Mono" font-size="3.5" text-anchor="middle"><textPath href="#lblQLR" startOffset="50%">queries</textPath></text>
+  <text fill="#66ddaa" font-family="Roboto Mono" font-size="2.8" text-anchor="middle"><textPath href="#lblRLR" startOffset="50%">aggregated results</textPath></text>
+  <text fill="#FFD000" font-family="Roboto Mono" font-size="3.5" text-anchor="middle"><textPath href="#lblQRR" startOffset="50%">queries</textPath></text>
+  <text fill="#66ddaa" font-family="Roboto Mono" font-size="2.8" text-anchor="middle"><textPath href="#lblRRR" startOffset="50%">aggregated results</textPath></text>
+
+</svg>
+</div>
+
+Data never leaves the hospital. Only **aggregated results** travel back.

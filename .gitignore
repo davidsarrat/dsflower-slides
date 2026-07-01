@@ -1,0 +1,7 @@
+node_modules
+dist
+.slidev
+.DS_Store
+export
+export16
+components/.DS_Store
