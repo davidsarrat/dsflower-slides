@@ -14,10 +14,8 @@
 
 </div>
 
-<div class="mt-8" v-click>
+<div class="mt-8 text-center" v-click style="color:#c8b8a8;">
 
-### Submission — from the researcher's side
-
-The researcher never logs into a hospital. They **compose the app and submit it to the run**; Flower packages it (a **FAB**) and ships it to every SuperNode, which spins up the ClientApp on demand. In dsFlower that submission travels **through DataSHIELD** — the same channel used for any federated query.
+Both apps are **defined by the researcher**.
 
 </div>

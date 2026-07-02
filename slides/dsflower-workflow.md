@@ -44,7 +44,7 @@
   <text x="735" y="64" fill="#b0b8c0" font-family="Roboto Mono" font-size="2.5" text-anchor="middle">+</text>
   <foreignObject x="635" y="57" width="200" height="36">
     <div xmlns="http://www.w3.org/1999/xhtml" style="height:100%;display:flex;align-items:center;justify-content:center;">
-      <span :class="$clicks>=1 ? 'disc-on' : ''" :style="'font-family:Roboto Mono,monospace;font-size:11px;line-height:1;padding:1.5px 4px;border-radius:2px;white-space:nowrap;' + ($clicks>=1 ? 'background:#FFD000;color:#1a1206;font-weight:600;' : 'background:transparent;color:#b0b8c0;')">Disclosure Control</span>
+      <span :class="$clicks>=1 ? 'disc-on' : ''" :style="'font-family:Roboto Mono,monospace;font-size:11px;line-height:1;padding:1.5px 4px;border-radius:2px;white-space:nowrap;' + ($clicks>=1 ? 'background:#FFD000;color:#1a1206;font-weight:600;' : 'background:transparent;color:#b0b8c0;')">Differential Privacy</span>
     </div>
   </foreignObject>
 

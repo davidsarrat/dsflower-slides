@@ -53,10 +53,6 @@ transition: none
 ---
 
 ---
-src: ./slides/transport.md
----
-
----
 src: ./slides/server-stack.md
 ---
 
@@ -66,10 +62,6 @@ src: ./slides/client-side.md
 
 ---
 src: ./slides/differential-privacy.md
----
-
----
-src: ./slides/dp-mechanisms.md
 ---
 
 ---

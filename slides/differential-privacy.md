@@ -26,7 +26,7 @@ It is the **only** privacy mechanism dsFlower ships — no template catalogue, n
 
 The analyst **never sets the privacy level**; each node fixes it from its own DataSHIELD options.
 
-<div class="mt-3" style="color:#a89888; font-size:0.85em;">One formal guarantee — applied with the right mechanism for each method&nbsp;→</div>
+<div class="mt-3" style="color:#a89888; font-size:0.85em;">Applied the right way per method: <strong>DP-SGD</strong> inside neural training, <strong>DP-GBDT</strong> for trees.</div>
 
 </div>
 </div>
