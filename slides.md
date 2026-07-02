@@ -15,7 +15,7 @@ codeCopy: false
     ds<span class="flower-title">Flower</span>
   </div>
   <div style="font-size: 1.1em; color: #000000; margin-top: 0.3em; letter-spacing: 0.02em;">
-    Privacy-Preserving Federated Learning for Biomedical Research
+    Privacy-Preserving Federated Learning for DataSHIELD
   </div>
   <div class="flex items-center justify-center gap-6" style="margin-top: 2em;">
     <div class="flex flex-col items-center gap-1">
