@@ -14,7 +14,7 @@
 </div>
 <div>
 
-Every neural model is a **Tier-1 nn.Module spec** — pick it by name, the node builds it.
+Every neural model is a **Tier-1 nn.Module spec**: pick it by name, the node builds it.
 
 The stack is deliberately small:
 

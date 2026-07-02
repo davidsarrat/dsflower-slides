@@ -15,6 +15,9 @@
   font-family: 'Montserrat', sans-serif !important;
   overflow: hidden !important;
   position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
 }
 
 /* Dark tint — lets lava glow through */

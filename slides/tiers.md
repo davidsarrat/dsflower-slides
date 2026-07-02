@@ -3,25 +3,23 @@
 <div class="grid grid-cols-2 gap-6 mt-4">
 
 <div>
-<div style="font-family:'Roboto Mono',monospace; color:#66ddaa; font-weight:600; font-size:1.05em;">Tier 1 · <span class="g-term" data-g="nn.Module spec">nn.Module spec</span></div>
-<div style="color:#b8b0a8; font-size:0.9em; margin-top:0.5em;">A <strong>declarative description</strong> — not code — built from an allowlisted vocabulary of stock torch layers. The <strong>node</strong> assembles the <code>nn.Module</code> and owns the loop, loss and optimizer.</div>
-<div class="step-card" style="padding:0.6em 1em; margin-top:0.8em; border-color:rgba(102,221,170,0.25);">
-  <span style="color:#66ddaa; font-size:0.85em;">No researcher code runs → <strong>DP-SGD guaranteed by construction.</strong> Every built-in model lives here.</span>
+<div style="font-family:'Roboto Mono',monospace; color:#66ddaa; font-weight:600; font-size:1.05em;">Tier 1 · nn.Module spec</div>
+<div style="color:#b8b0a8; font-size:0.9em; margin-top:0.6em;">A small <strong>declarative language</strong> we built to describe a model: a stock-layer <strong>nn.Module</strong>, sent as data, never code. The node assembles and trains it.</div>
+<div class="step-card" style="padding:0.7em 1em; margin-top:0.9em; border-color:rgba(102,221,170,0.3);">
+  <span style="color:#66ddaa; font-size:0.85em;">Because the node holds a real <code>nn.Module</code>, it runs <strong>per-sample DP-SGD</strong>: noise calibrated to each patient's own gradient. The <strong>finest-grained, strongest</strong> differential privacy.</span>
 </div>
 </div>
 
 <div>
-<div style="font-family:'Roboto Mono',monospace; color:#FFD000; font-weight:600; font-size:1.05em;">Tier 2 · <span class="g-term" data-g="App tier">uploaded app</span></div>
-<div style="color:#b8b0a8; font-size:0.9em; margin-top:0.5em;">A full <strong>Flower app</strong> for anything the spec can't express. It runs <strong>arbitrary code</strong>, so it must pass <strong>the gate</strong>:</div>
-<div class="step-card" style="padding:0.6em 1em; margin-top:0.8em;">
-  <div style="color:#b8b0a8; font-size:0.83em; line-height:1.8;">
+<div style="font-family:'Roboto Mono',monospace; color:#FFD000; font-weight:600; font-size:1.05em;">Tier 2 · uploaded app</div>
+<div style="color:#b8b0a8; font-size:0.9em; margin-top:0.6em;">A full <strong>Flower app</strong> for anything the spec cannot express. It runs <strong>arbitrary code</strong>, so it passes <strong>the gate</strong>:</div>
+<div class="step-card" style="padding:0.7em 1em; margin-top:0.9em;">
+  <div style="color:#b8b0a8; font-size:0.83em; line-height:1.9;">
   · fail-closed <strong>exfiltration scan</strong><br/>
-  · <strong>sandbox</strong> + <strong>egress DP</strong> (output perturbation)<br/>
-  · <strong>SHA-256</strong> pinned &amp; identical on every node
+  · <strong>sandbox</strong> + <strong>SHA-256</strong> pinned on every node<br/>
+  · DP only at the <strong>output</strong> (coarser than DP-SGD)
   </div>
 </div>
 </div>
 
 </div>
-
-<div class="mt-5" v-click style="text-align:center; color:#c8b8a8; font-size:0.92em;">Safe by default, extensible when you need it — the node stays in control either way.</div>

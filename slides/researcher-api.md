@@ -21,13 +21,13 @@ fit <- ds.flower.fit(
 
 Three plain-language choices:
 
-- `model` — **what** to train
-- `target` — the **outcome** column
-- `rounds` — **how long**
+- `model`: **what** to train
+- `target`: the **outcome** column
+- `rounds`: **how long**
 
 <div class="mt-4" v-click>
 
-That's it. **Privacy is enforced by the server**, so the guarantee holds no matter what the analyst writes — there is no privacy knob to get wrong.
+That's it. **Privacy is enforced by the server**, so the guarantee holds no matter what the analyst writes. There is no privacy knob to get wrong.
 
 </div>
 

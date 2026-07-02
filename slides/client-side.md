@@ -32,7 +32,7 @@
   <!-- ===== CLICK 3: Template catalog ===== -->
   <g v-click>
     <rect x="195" y="140" width="330" height="42" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
-    <text x="360" y="157" text-anchor="middle" fill="#e0d8d0" font-family="Roboto Mono" font-size="2.8">Model — a spec or an app</text>
+    <text x="360" y="157" text-anchor="middle" fill="#e0d8d0" font-family="Roboto Mono" font-size="2.8">Model: a spec or an app</text>
     <text x="360" y="174" text-anchor="middle" fill="#b0b8c0" font-family="Roboto Mono" font-size="2.5">Tier-1 nn.Module spec · Tier-2 uploaded app</text>
 
     <text x="560" y="155" fill="#88ccff" font-family="Roboto Mono" font-size="3">register_model()</text>

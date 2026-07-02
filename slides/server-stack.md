@@ -58,7 +58,7 @@
     <rect x="200" y="190" width="335" height="52" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="0.8"/>
     <text x="367" y="207" text-anchor="middle" fill="#e0d8d0" font-family="Roboto Mono" font-size="2.8">Enforced-DP tracks</text>
     <text x="367" y="221" text-anchor="middle" fill="#FFD000" font-family="Roboto Mono" font-size="2.5">neural (nn.Module spec) · trees (DP-GBDT)</text>
-    <text x="367" y="235" text-anchor="middle" fill="#b0b8c0" font-family="Roboto Mono" font-size="2">apps arrive from the researcher — nothing preinstalled</text>
+    <text x="367" y="235" text-anchor="middle" fill="#b0b8c0" font-family="Roboto Mono" font-size="2">apps arrive from the researcher, nothing preinstalled</text>
   </g>
 
   <!-- ===== CLICK 5: Security (SVG part) ===== -->

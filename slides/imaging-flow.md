@@ -1,4 +1,4 @@
-## Federated vision — the same round-trip
+## Federated vision: the same round-trip
 
 <div style="margin-top:0.4em;">
 <svg viewBox="0 0 830 330" style="width:100%; max-height:320px;">
@@ -46,5 +46,5 @@
 </div>
 
 <div class="mt-1" style="color:#c8b8a8; font-size:0.92em;">
-Vision changes nothing about the protocol: dsImaging feeds images to a model <strong>inside the node</strong>, DP-SGD protects the update, and the researcher exchanges weights over the same tunnel — exactly like the tabular case.
+Vision changes nothing about the protocol: dsImaging feeds images to a model <strong>inside the node</strong>, DP-SGD protects the update, and the researcher exchanges weights over the same tunnel, exactly like the tabular case.
 </div>
